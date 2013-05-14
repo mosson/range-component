@@ -12,3 +12,7 @@ logs
 results
 
 npm-debug.log
+
+.tmp
+*.sublime-*
+node_modules
