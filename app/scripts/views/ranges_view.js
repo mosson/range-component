@@ -26,7 +26,6 @@ define(
 				);
 
 				this.collection.at(0).set("is_active", true);
-				this.listenTo( this.collection, "change:is_active", this.activate );
 			},
 
 			events: {
@@ -36,14 +35,6 @@ define(
 
 			active_model: function(){
 				return this.collection.findWhere({"is_active": true});
-			},
-
-			activate: function(target_model){
-				this.collection.each(function(model){
-					if( target_model !== model ){
-						model.set({"is_active": false}, { silent: true });
-					}
-				});
 			},
 
 			drag_start: function(e){
@@ -65,7 +56,7 @@ define(
 				e.preventDefault();
 
 				var next_model = this.collection.next( this.active_model() );
-				if( next_model ) next_model.set("is_active", true);
+				this.collection.activate( next_model );
 
 				$(document).off("mousemove touchmove", this._drag_move );
 				$(document).off("mouseup touchend", 	 this._drag_end  );

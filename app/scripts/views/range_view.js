@@ -10,7 +10,7 @@ define(['backbone', 'models/range'], function(Backbone, Range){
 
 			this.set_position();
 
-			this.listenTo(this.model, "change:value", this.set_position);
+			this.listenTo(this.model, "change:value", 		this.set_position);
 			this.listenTo(this.model, "change:is_active", this.toggle_active);
 		},
 
@@ -31,7 +31,7 @@ define(['backbone', 'models/range'], function(Backbone, Range){
 		},
 
 		toggle_active: function( model ){
-			if( model.get("is_active") ){
+			if( this.model.get("is_active") ){
 				this.$el.addClass("active");
 			}else{
 				this.$el.removeClass("active");
