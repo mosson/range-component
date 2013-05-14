@@ -72,8 +72,9 @@ and, HTML structure is
 
 ## LICENSE
 
-MIT or Beerware
+MIT or Beerware, as you like
 
+```
 /*
  * ----------------------------------------------------------------------------
  * "THE BEER-WARE LICENSE" (Revision 42):
@@ -82,3 +83,4 @@ MIT or Beerware
  * this stuff is worth it, you can buy me a beer in return Poul-Henning Kamp
  * ----------------------------------------------------------------------------
  */
+ ```
