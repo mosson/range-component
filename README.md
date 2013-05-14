@@ -9,6 +9,10 @@ also, you can edit **LOOK AND FEEL** by **CSS**.
 
 enjoy.
 
+---
+[see demo pages](http://mosson.github.io/range-component/)
+---
+
 ## Dependencies
 
 - requirejs
