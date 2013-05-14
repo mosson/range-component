@@ -24,9 +24,12 @@ footer a { color: #fff; text-decoration: underline; font-size: 12px;}
 
 section {
   padding: 20px 0px 50px;
-  border-bottom: 1px solid #666;
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, .4);
+  border-bottom: 1px solid #999;
   margin-bottom: 20px;
+}
+
+section:last-child {
+  border-bottom: none;
 }
 
 .hero-unit {
