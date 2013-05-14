@@ -15,14 +15,20 @@ define(['backbone', 'models/range'], function(Backbone, Range){
 		},
 
 		events: {
-			"mousedown": "activate",
+			"mousedown": 	"activate",
 			"touchstart": "activate",
-			"click": "activate"
+			"click": 			"prevent"
 		},
 
 		activate: function(e){
+			e.stopPropagation();
 			e.preventDefault();
-			this.model.set("is_active", true);
+
+			this.model.trigger("delegate_to_drag", this.model);
+		},
+
+		prevent: function(e){
+			e.preventDefault();
 		},
 
 		set_position: function( model ){

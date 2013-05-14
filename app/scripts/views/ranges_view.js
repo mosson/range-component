@@ -26,6 +26,7 @@ define(
 				);
 
 				this.collection.at(0).set("is_active", true);
+				this.listenTo(this.collection, "delegate_to_drag", this.drag_delegate);
 			},
 
 			events: {
@@ -41,6 +42,13 @@ define(
 				e.preventDefault();
 
 				this.active_model().set_value( ( this.page_x(e) - this.$el.offset().left ) / this.width() );
+
+				$(document).on("mousemove touchmove", this._drag_move );
+				$(document).on("mouseup touchend", 		this._drag_end  );
+			},
+
+			drag_delegate: function( model ){
+				this.collection.activate( model );
 
 				$(document).on("mousemove touchmove", this._drag_move );
 				$(document).on("mouseup touchend", 		this._drag_end  );

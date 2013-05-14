@@ -3,10 +3,9 @@ define(['backbone', 'models/range'], function(Backbone, Range){
 		model: Range,
 
 		activate: function( model ){
-
 			if( model ) {
 				this.each(function(m){
-					m.set("is_active", m === model );
+					m.set("is_active", m == model );
 				});
 			}
 		},
