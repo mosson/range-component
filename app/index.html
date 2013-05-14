@@ -14,62 +14,282 @@
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+        <style type="text/css">
+        body, html {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+        }
+        </style> 
     </head>
     <body>
-        <div class="container">
+        <header>
+            <div class="container">
+                <h1>Range Component</h1>
+                <h5>pseudo range input element on Backbone.js</h5>
+            </div>
+        </header>
 
-            <section class="single">
-                <label class="range">
-                    <ul class="range-divisions">
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                    </ul>
-                    <div class="handles">
-                        <a href="#" class="handle">
-                            <input type="range" value="0.5" step="any" min="0" max="1" />
-                            <span>|</span>
-                        </a>
+        <div class="content">
+            <div class="container">
+                <section>
+                    <h3>Block Element</h3>
+                    <p>Fit width Any size, you want</p>
+
+                    <div class="range">
+                        <ul class="range-divisions">
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                        <div class="handles">
+                            <a href="#" class="handle">
+                                <input type="range" value="0.5" step="any" min="0" max="1" />
+                                <span>|</span>
+                            </a>
+                        </div>
                     </div>
-                </label>
-            </section>
 
-            <section class="multi">
-                <div class="range">
-                    <ul class="range-divisions">
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
+                    <ul class="divide">
+                        <li>
+                            <div class="inner">
+                                <div class="range">
+                                    <ul class="range-divisions">
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                    </ul>
+                                    <div class="handles">
+                                        <a href="#" class="handle">
+                                            <input type="range" value="0.5" step="any" min="0" max="1" />
+                                            <span>|</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <div class="range">
+                                    <ul class="range-divisions">
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                    </ul>
+                                    <div class="handles">
+                                        <a href="#" class="handle">
+                                            <input type="range" value="0.5" step="any" min="0" max="1" />
+                                            <span>|</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <div class="range">
+                                    <ul class="range-divisions">
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                    </ul>
+                                    <div class="handles">
+                                        <a href="#" class="handle">
+                                            <input type="range" value="0.5" step="any" min="0" max="1" />
+                                            <span>|</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
-                    <div class="handles">
-                        <a href="#" class="handle" title="1">
-                            <input type="range" value="0.5" step="any" min="0" max="1" />
-                            <span>|</span>
-                        </a>
+                </section>
+                <section class="single">
+                    <h3>Single Handle</h3>
+                    <p>Basic pseudo range input, but you change change LOOK and FEEL by CSS</p>
 
-                        <a href="#" class="handle" title="2">
-                            <input type="range" value="0.5" step="any" min="0" max="1" />
-                            <span>|</span>
-                        </a>
-
-                        <a href="#" class="handle" title="3">
-                            <input type="range" value="0.5" step="any" min="0" max="1" />
-                            <span>|</span>
-                        </a>
+                    <div class="range">
+                        <ul class="range-divisions">
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                        <div class="handles">
+                            <a href="#" class="handle">
+                                <input type="range" value="0.5" step="any" min="0" max="1" />
+                                <span>|</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </section>
 
+                    <div class="code">
+                        <h4>CODE</h4>
+
+<pre>&lt;div class="range"&gt;
+    &lt;ul class="range-divisions"&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="handles"&gt;
+        &lt;a href="#" class="handle"&gt;
+            &lt;input type="range" value="0.5" step="any" min="0" max="1" /&gt;
+            &lt;span&gt;|&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    </div>
+                </section>
+
+                <section class="multi">
+                    <h3>Multi handles</h3>
+                    <p>Also, You can place multiple handles on an line.</p>
+
+                    <div class="range">
+                        <ul class="range-divisions">
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                        <div class="handles">
+                            <a href="#" class="handle" title="1">
+                                <input type="range" value="0.5" step="any" min="0" max="1" />
+                                <span>|</span>
+                            </a>
+
+                            <a href="#" class="handle" title="2">
+                                <input type="range" value="0.5" step="any" min="0" max="1" />
+                                <span>|</span>
+                            </a>
+
+                            <a href="#" class="handle" title="3">
+                                <input type="range" value="0.5" step="any" min="0" max="1" />
+                                <span>|</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="code">
+                        <h4>CODE</h4>
+<pre>&lt;div class="range"&gt;
+    &lt;ul class="range-divisions"&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+        &lt;li&gt;&nbsp;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="handles"&gt;
+        &lt;a href="#" class="handle" title="1"&gt;
+            &lt;input type="range" value="0.5" step="any" min="0" max="1" /&gt;
+            &lt;span&gt;|&lt;/span&gt;
+        &lt;/a&gt;
+
+        &lt;a href="#" class="handle" title="2"&gt;
+            &lt;input type="range" value="0.5" step="any" min="0" max="1" /&gt;
+            &lt;span&gt;|&lt;/span&gt;
+        &lt;/a&gt;
+
+        &lt;a href="#" class="handle" title="3"&gt;
+            &lt;input type="range" value="0.5" step="any" min="0" max="1" /&gt;
+            &lt;span&gt;|&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Dependencies</h3>
+                    <p>i recommend to use <strong>yomen generator-backbone</strong></p>
+
+                    <ul>
+                        <li>requirejs</li>
+                        <li>jquery</li>
+                        <li>underscore.js</li>
+                        <li>backbone.js</li>
+                    </ul>
+                    
+<pre>
+require.config({
+    /*
+    ...
+    */
+    
+    // it's important of name of keys
+    paths: {
+        jquery: '[jquery_path]',
+        backbone: '[backbone_path]',
+        underscore: '[underscore_path]',
+    }
+});
+
+...
+
+require(['jquery', 'views/ranges_view'], function($, RangesView){
+    $(document).ready(function(){
+        // for example, all el, has range class, behavior range component.
+        $(".range").each(function(){
+            new RangesView({el: $(this)});
+        });
+    });
+});
+</pre>
+                    
+
+                </section>
+
+                <section>
+                    <h3>LICENSE</h3>
+                    <p>MIT or Beerware, as you like</p>
+                </section>
+            </div> 
         </div>
 
+        <footer>
+            <div class="container">
+                <p>
+                    <a href="/">BACK TO ROOT</a>
+                </p>
+                <p>
+                    <a href="javascript:window.scrollTo(0,0);">BACK TO TOP</a>
+                </p>
+            </div>
+        </footer>
         
 
         <!--[if lt IE 7]>
