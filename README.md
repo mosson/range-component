@@ -22,8 +22,6 @@ enjoy.
 - underscore.js
 - backbone.js
 
-i recommend to use **yomen** generator-backbone
-
 ## Usage
 
 
