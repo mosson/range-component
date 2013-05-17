@@ -17,5 +17,5 @@ npm-debug.log
 *.sublime-*
 node_modules
 
-app/bower_components/*
+app/bower_components/*/*
 !app/bower_components/*/*.js
